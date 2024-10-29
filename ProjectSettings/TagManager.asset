@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Platform
   - ColorChangeTrigger
+  - ShapeChangeTrigger
+  - DoubleJumpTrigger
+  - HatTrigger
   layers:
   - Default
   - TransparentFX

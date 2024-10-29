@@ -1,11 +1,14 @@
+using System;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private float horizontal;
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 10f;
     private bool isFacingRight = true;
+    public bool doubleJumpEnabled = false;
+    private bool isDoubleJumping = false;
 
     private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -19,9 +22,19 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetButtonDown("Jump"))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+            if (IsGrounded()) {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+            }
+            else {
+                if (doubleJumpEnabled && !isDoubleJumping)
+                {
+                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpingPower);
+                    isDoubleJumping = true;
+                }
+            }
+            
         }
 
         if (Input.GetButtonUp("Jump") && rb.linearVelocity.y > 0f)
@@ -40,7 +53,11 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         // 0.2
-        return Physics2D.OverlapCircle(groundCheck.position, 0.7f, groundLayer);
+        if (Physics2D.OverlapCircle(groundCheck.position, 0.7f, groundLayer)) {
+            isDoubleJumping = false;
+            return true;
+        }
+        return false;
     }
 
     private void Flip()
