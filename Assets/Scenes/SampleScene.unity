@@ -344,7 +344,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5.390367
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -450,7 +450,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 5.390367
+    OrthographicSize: 8
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -695,7 +695,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.065022945, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -783,7 +783,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.98039216, g: 0.4897706, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -963,7 +963,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.784225, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1097,7 +1097,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.49527264, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1169,11 +1169,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7668482309381078717, guid: 6089766a2f1124629901c3d52c2bc30c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.94
+      value: -86.2
       objectReference: {fileID: 0}
     - target: {fileID: -7668482309381078717, guid: 6089766a2f1124629901c3d52c2bc30c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.18
+      value: 164.9
       objectReference: {fileID: 0}
     - target: {fileID: -7668482309381078717, guid: 6089766a2f1124629901c3d52c2bc30c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1261,7 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  jumpingPower: 12
+  jumpingPower: 13
   doubleJumpEnabled: 0
   groundCheck: {fileID: 157122106}
   groundLayer:
@@ -1610,6 +1610,18 @@ PrefabInstance:
     - target: {fileID: 5283160275637593889, guid: ed1823c976d2f462fa9ec76bc55b781e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588026553305881260, guid: ed1823c976d2f462fa9ec76bc55b781e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.67153305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588026553305881260, guid: ed1823c976d2f462fa9ec76bc55b781e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.3250267
+      objectReference: {fileID: 0}
+    - target: {fileID: 6588026553305881260, guid: ed1823c976d2f462fa9ec76bc55b781e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8301887
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
