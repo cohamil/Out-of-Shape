@@ -23,7 +23,7 @@ public class FallRespawn : MonoBehaviour
         }
     }
 
-    void Respawn()
+    public void Respawn()
     {
         // Teleport the player back to the starting position
         transform.position = startingPosition;
