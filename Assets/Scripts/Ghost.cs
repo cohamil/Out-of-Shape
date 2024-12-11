@@ -53,4 +53,8 @@ public class Ghost : MonoBehaviour
             RespawnGhost();
         }
     }
+
+    public void setSpeed (float speed){
+        this.speed = 0f;
+    }
 }

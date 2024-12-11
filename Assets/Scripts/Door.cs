@@ -3,6 +3,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     private Key key; // Reference to the Key script
+    public Ghost ghost;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,6 +27,7 @@ public class Door : MonoBehaviour
             {
                 // make the door disappear
                 gameObject.SetActive(false);
+                ghost.setSpeed(0f);
             }
         }
     }
